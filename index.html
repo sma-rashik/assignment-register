@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body
+    class="bg-white border border-gray-200 shadow-lg rounded px-15 py-12 sm:px-6 sm:py-6 max-w-lg mx-auto mt-6 sm:px-4">
+    <div class="container mx-auto ">
+        <form id="form" action="/">
+            <div class="text-center mb-8">
+                <h1 class="text-gray-700 text-2xl font-semibold mb-4 tracking-tight">Start your 5 day free trial.</h1>
+            </div>
+            <div class="input-control mt-4">
+                <label for="username" class="text-gray-700 text-sm font-normal mb-1">Your Name</label> <br>
+                <input id="username" name="username" type="text"
+                    class="border border-gray-300 w-full  rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+                <div class="error text-red-500 text-xs"></div>
+            </div>
+            <div class="input-control mt-4">
+                <label for="email" class="text-gray-700 text-sm font-normal mb-1">Your email</label> <br>
+                <input id="email" name="email" type="text"
+                    class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+                <div class="error text-red-500 text-xs"></div>
+            </div>
+            <div class="input-control mt-4">
+                <label for="phone" class="text-gray-700 text-sm font-normal mb-1">Your mobile number</label>
+                <input id="phone" name="phone" type="number"
+                    class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+                <div class="error text-red-500 text-xs"></div>
+            </div>
+
+            <div class="input-control mb-4 relative">
+                <label for="password" class="text-gray-700 text-sm font-normal mb-1">Password</label>
+                <input id="password" name="password" type="password"
+                    class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+                <div class="error text-red-500 text-xs"></div>
+                <button id="togglePassword" class="absolute top-0 bottom-0 right-0 mr-3 mt-2">
+                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                        <path fill-rule="evenodd"
+                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="input-control mt-4">
+                <label for="password2" class="text-gray-700 text-sm font-normal mb-1">Confirm password </label> <br>
+                <input id="password2" name="password2" type="password"
+                    class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+                <div class="error text-red-500 text-xs"></div>
+            </div>
+
+            <div class="mb-5">
+                <div class="mt-2" x-data="{ open: false }">
+                    <div @click="open = !open" class="inline-flex items-center text-sm text-gray-700 cursor-pointer">
+                        <svg class="h-5 w-5 text-gray-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+
+                        Add referral code
+                    </div>
+                    <div x-show="open" style="display: none;">
+                        <label class="text-gray-700 text-sm font-normal mb-1 hidden">Referral code</label>
+                        <div class="input string optional user_sign_up_referral_code"><input
+                                class="string optional shadow-none w-full border border-gray-300 rounded py-3 px-3 text-sm shadow-sm h-10"
+                                type="text" name="user[sign_up_referral_code]" id="user_sign_up_referral_code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <div class="flex items-center">
+                    <input name="user[tos_accepted]" type="hidden" value="0" autocomplete="off"><input label="false"
+                        required="required"
+                        class="shadow-none mb-0 mr-2 border border-gray-300 rounded py-3 px-3 text-sm shadow-sm h-10"
+                        type="checkbox" value="1" name="user[tos_accepted]" id="user_tos_accepted">
+                    <div class="text-gray-600 text-sm">
+                        I agree to your
+                        <a class="underline text-gray-600"
+                            href="https://www.labsmartlis.com/terms-and-conditions-of-service-and-use"
+                            target="_blank">Terms of service</a>
+                        and
+                        <a class="underline text-gray-600" href="https://www.labsmartlis.com/privacy-policy"
+                            target="_blank">Privacy Policy.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="m-4  text-center">
+                <button type="submit" class="bg-blue-600 px-15 py-3  cursor-pointer w-full  text-white">Create
+                    Account</button>
+            </div>
+            <div class="text-center">
+                <div class="inline-flex">
+                    <div class="text-gray-700 text-sm font-normal">Have an account?</div>
+                    <a class="text-blue-600 text-sm font-normal ml-1" href="#">Log in</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
