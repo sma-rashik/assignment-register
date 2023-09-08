@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,33 +14,32 @@
 
 </head>
 
-<body
-    class="bg-white border border-gray-200 shadow-lg rounded px-15 py-12 sm:px-6 sm:py-6 max-w-lg mx-auto mt-6 sm:px-4">
-    <div class="container mx-auto ">
+<body class="bg-white border border-gray-200 shadow-lg rounded px-4 py-4 sm:px-6 sm:py-6 max-w-lg mx-auto mt-6">
+    <div class="container mx-auto">
         <form id="form" action="/">
-            <div class="text-center mb-8">
-                <h1 class="text-gray-700 text-2xl font-semibold mb-4 tracking-tight">Start your 5 day free trial.</h1>
+            <div class="text-center mb-4">
+                <h1 class="text-gray-700 text-xl font-semibold mb-2 tracking-tight">Start your 5 day free trial.</h1>
             </div>
-            <div class="input-control mt-4">
-                <label for="username" class="text-gray-700 text-sm font-normal mb-1">Your Name</label> <br>
+            <div class="mb-4">
+                <label for="username" class="text-gray-700 text-sm font-normal mb-1">Your Name</label>
                 <input id="username" name="username" type="text"
-                    class="border border-gray-300 w-full  rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+                    class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
                 <div class="error text-red-500 text-xs"></div>
             </div>
-            <div class="input-control mt-4">
-                <label for="email" class="text-gray-700 text-sm font-normal mb-1">Your email</label> <br>
+            <div class="mb-4">
+                <label for="email" class="text-gray-700 text-sm font-normal mb-1">Your Email</label>
                 <input id="email" name="email" type="text"
                     class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
                 <div class="error text-red-500 text-xs"></div>
             </div>
-            <div class="input-control mt-4">
-                <label for="phone" class="text-gray-700 text-sm font-normal mb-1">Your mobile number</label>
+            <div class="mb-4">
+                <label for="phone" class="text-gray-700 text-sm font-normal mb-1">Your Mobile Number</label>
                 <input id="phone" name="phone" type="number"
                     class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
                 <div class="error text-red-500 text-xs"></div>
             </div>
 
-            <div class="input-control mb-4 relative">
+            <div class="mb-4 relative">
                 <label for="password" class="text-gray-700 text-sm font-normal mb-1">Password</label>
                 <input id="password" name="password" type="password"
                     class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
@@ -55,14 +55,14 @@
                 </button>
             </div>
 
-            <div class="input-control mt-4">
-                <label for="password2" class="text-gray-700 text-sm font-normal mb-1">Confirm password </label> <br>
+            <div class="mb-4">
+                <label for="password2" class="text-gray-700 text-sm font-normal mb-1">Confirm Password</label>
                 <input id="password2" name="password2" type="password"
                     class="border border-gray-300 w-full rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
                 <div class="error text-red-500 text-xs"></div>
             </div>
 
-            <div class="mb-5">
+            <div class="mb-4">
                 <div class="mt-2" x-data="{ open: false }">
                     <div @click="open = !open" class="inline-flex items-center text-sm text-gray-700 cursor-pointer">
                         <svg class="h-5 w-5 text-gray-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -71,10 +71,10 @@
                                 d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
 
-                        Add referral code
+                        Add Referral Code
                     </div>
                     <div x-show="open" style="display: none;">
-                        <label class="text-gray-700 text-sm font-normal mb-1 hidden">Referral code</label>
+                        <label class="text-gray-700 text-sm font-normal mb-1 hidden">Referral Code</label>
                         <div class="input string optional user_sign_up_referral_code"><input
                                 class="string optional shadow-none w-full border border-gray-300 rounded py-3 px-3 text-sm shadow-sm h-10"
                                 type="text" name="user[sign_up_referral_code]" id="user_sign_up_referral_code">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-8">
+            <div class="mb-4">
                 <div class="flex items-center">
                     <input name="user[tos_accepted]" type="hidden" value="0" autocomplete="off"><input label="false"
                         required="required"
@@ -92,15 +92,15 @@
                         I agree to your
                         <a class="underline text-gray-600"
                             href="https://www.labsmartlis.com/terms-and-conditions-of-service-and-use"
-                            target="_blank">Terms of service</a>
+                            target="_blank">Terms of Service</a>
                         and
                         <a class="underline text-gray-600" href="https://www.labsmartlis.com/privacy-policy"
-                            target="_blank">Privacy Policy.</a>
+                            target="_blank">Privacy Policy</a>.
                     </div>
                 </div>
             </div>
-            <div class="m-4  text-center">
-                <button type="submit" class="bg-blue-600 px-15 py-3  cursor-pointer w-full  text-white">Create
+            <div class="mb-4">
+                <button type="submit" class="bg-blue-600 px-15 py-3  cursor-pointer w-full text-white">Create
                     Account</button>
             </div>
             <div class="text-center">
@@ -111,7 +111,6 @@
             </div>
         </form>
     </div>
-
 
     <script src="./script.js"></script>
 </body>
